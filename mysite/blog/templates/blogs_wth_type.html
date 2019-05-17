@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>{{ blog_type_.type.name }}</title>
+</head>
+<body>
+	<div>
+		<a href="{% url 'home' %}">
+		    <h3>my blog</h3>
+	    </a>
+	</div>
+	<hr>
+	<h3>{{ blog_type_.type.name }}</h3>
+
+	
+		 
+         <p>{{ blog.content|truncatechars:30 }}</p>
+	
+	<p>li y a {{ blogs|length }}blogs</p>
+</body>
+</html>

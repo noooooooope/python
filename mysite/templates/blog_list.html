@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	mysite
+{% endblock %}
+
+{% block.nav_blog_active %}active{% endblock %}
+
+{% block content %}
+	{% for blog in blogs %}
+		<a href="{% url 'blog_detail' blog.pk %">
+			<h3>{{ blog.title }}</h3>
+		</a>
+		<p>{{blog.content }}</p>
+	{% empty %}
+		<p> wow </p>
+	{% endfor %}
+	<p>li y a {{ blog|length }}blogs</p>
+{% endblock %}

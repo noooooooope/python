@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}information{% endblock %}
+{% block nav_home_active %}active{% endblock %}
+{% block content %}
+	<div class="containter">
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1">
+				<hr>
+				<hr>
+				<hr>
+				<hr>
+				<hr>
+				<hr>
+				<h2>{{ user.username }}</h2>
+				<u1>
+					<li>
+						email: {% if user.email %}{{ user.email }}<a href="{% url 'bind_email' %}?from={{ request.get_full_path }}">    change</a>{% endif %}
+					</li>
+				</u1>
+				
+			</div>
+			
+		</div>
+	</div>
+{% endblock %}
